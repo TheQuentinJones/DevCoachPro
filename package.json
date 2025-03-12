@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm i && npm run seed && npm run build && npm run start:dev",
-    "start": "npm run Client:build && npm run Server",
-    "start:dev": "concurrently \"npm run Server:dev\" \"wait-on tcp:3001 && npm run Client:dev\"",
+    "start": "npm run client:build && npm run Server",
+    "start:dev": "concurrently \"npm run Server:dev\" \"wait-on tcp:3001 && npm run client:dev\"",
     "server": "cd Server && npm start",
     "server:dev": "cd Server && npm run dev",
     "install": "cd Server && npm i && cd ../Client && npm i",
